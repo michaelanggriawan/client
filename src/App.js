@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  HashRouter,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import AuthState from '../src/context/auth/AuthState';
+import TodoState from '../src/context/todo/TodoState';
+import PrivateRoute from './components/routing/privateRoute';
+
+// Page
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import Home from './pages/Home/Home';
+import Todo from './pages/Todo/Todo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthState>
+      <TodoState>
+        <Router history={HashRouter}>
+          <Switch>
+            <Route exact path="/" component={Login} />
+            <Route path="/register" component={Register} />
+            <PrivateRoute path="/home" component={Home} />
+            <PrivateRoute path="/todo" component={Todo} />
+          </Switch>
+        </Router>
+      </TodoState>
+    </AuthState>
   );
 }
 

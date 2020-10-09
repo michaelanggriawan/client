@@ -1,0 +1,19 @@
+.todo__alertContainer {
+  display: flex;
+  padding: 8px;
+  width: 20rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.todo__alertImage {
+  height: 24px;
+  width: 24px;
+  margin-right: 8px;
+}
+
+.todo__alertMessage {
+  font-size: 14px;
+  font-style: italic;
+  color: red;
+}

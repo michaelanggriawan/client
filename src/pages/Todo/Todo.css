@@ -1,0 +1,18 @@
+.todo-content {
+  margin: 50px 200px;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.fa-trash:hover {
+  cursor: pointer;
+}
+
+.fa-pencil:hover {
+  cursor: pointer;
+}

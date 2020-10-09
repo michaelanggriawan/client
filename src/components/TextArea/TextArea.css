@@ -1,0 +1,50 @@
+.todo__textAreaContainer {
+  border: 1px solid #767676;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 12px;
+  line-height: 30px;
+  position: relative;
+}
+
+.todo__textAreaLabel {
+  font-size: 16px;
+  position: absolute;
+  transform: translate(0, 16px) scale(1);
+  color: #767676;
+}
+
+.todo__textArea {
+  margin-top: 5px;
+  padding-top: 15px;
+  width: 100%;
+  resize: none;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  min-height: 10rem;
+  border: 0px;
+  color: #000;
+  line-height: 23.5px;
+}
+
+.todo__textAreaContainer.active .todo__textAreaLabel {
+  transform: translate(0, 4px) scale(0.85);
+}
+
+.todo__textArea::placeholder {
+  color: #767676;
+}
+
+textarea:focus {
+  outline: none !important;
+}
+textarea:disabled {
+  opacity: 0.8;
+  background: #eeeeee;
+  cursor: no-drop;
+}
+
+.todo__textAreaContainer:focus-within {
+  border-width: 1.5px;
+  border-color: #222222;
+}

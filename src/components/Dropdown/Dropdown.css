@@ -1,0 +1,133 @@
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.todo__dropdownContainer {
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1050;
+}
+
+.todo__dropdownButton:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.todo__dropdownButton.is-filled {
+  color: rgb(36, 40, 45);
+}
+
+.todo__dropdownButton {
+  font-size: 13px;
+  user-select: none;
+  display: block;
+  width: 100%;
+  position: relative;
+  text-align: left;
+  height: 42px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 1.538rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+  background: rgb(255, 255, 255);
+  border-radius: 6px;
+  border: 1px solid #718096;
+  border-image: initial;
+  padding-left: 8px;
+  overflow: hidden;
+}
+
+.todo_dropdownHeaderList {
+  display: inline-block;
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  margin-left: 8px;
+  font-size: 20px;
+}
+
+.todo__dropdownList {
+  position: absolute;
+  float: left;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  /* min-width: 10rem; */
+  font-size: 1rem;
+  color: rgb(33, 37, 41);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 1px;
+  text-align: left;
+  background-color: rgb(255, 255, 255);
+  background-clip: padding-box;
+  padding: 0.5rem 0px;
+  margin: 2px 0px 0px;
+  list-style: none;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  border-radius: 0.25rem;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+.todo__dropdownList::-webkit-scrollbar {
+  display: none;
+}
+
+.todo__list {
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  clear: both;
+  color: #767676;
+  background-color: transparent;
+  text-align: inherit;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 5px 5px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  overflow: hidden;
+  font-family: 'Airbnb Cereal App Light';
+}
+
+.todo__list:not(.disabled) {
+  cursor: pointer;
+}
+
+.todo__dropdownButton.is-open:hover,
+.todo__dropdownButton.is-open:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(72, 76, 79);
+  border-color: transparent;
+}
+
+.todo__dropdownButton:hover {
+  border-color: black;
+  border-width: 1px;
+}
+
+a:hover {
+  background-color: rgb(226, 230, 232);
+}
+
+.todo__dropdownValue {
+  color: #767676;
+  font-family: 'Airbnb Cereal App Light';
+  font-size: 16px;
+}
+
+.todo__dropdownValueOpen {
+  color: #ffffff;
+  font-family: 'Airbnb Cereal App Light';
+  font-size: 16px;
+}
